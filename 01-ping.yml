@@ -1,4 +1,5 @@
 - name: ping server
-  hosts: web
+  hosts: all
   tasks:
-  
+  - name: ping all the servers in inventory file
+    ansible.builtin.ping:
