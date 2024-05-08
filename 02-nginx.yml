@@ -1,0 +1,13 @@
+- name: Install Nginx
+  hosts: node1
+  become: true
+  tasks:
+    - name: Install nginx on node1
+      ansible.builtin.dnf:
+        name: nginx
+        state: installed
+    - name: start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
