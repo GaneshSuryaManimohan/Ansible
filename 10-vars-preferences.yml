@@ -1,17 +1,17 @@
 - name: Checking Variables Preferences
   hosts: localhost
-  # vars:
-  #   WISHES: "Hi from PLAY Level"
-  # vars_files:
-  #   - vars.yml
-  # vars_prompt:
-  # - name: WISHES
-  #   prompt: Please enter wishes
-  #   private: false
+  vars:
+    WISHES: "Hi from PLAY Level"
+  vars_files:
+    - vars.yml
+  vars_prompt:
+  - name: WISHES
+    prompt: Please enter wishes
+    private: false
   tasks:
     - name: printing preferences
-      # vars:
-      #   WISHES: "HI from TASK Level"
+      vars:
+        WISHES: "HI from TASK Level"
       ansible.builtin.debug:
         msg: "{{WISHES}}"
 
@@ -32,4 +32,4 @@
 
 #5. PLAY Level
 
-#6. 
+#6. Inventory Level
