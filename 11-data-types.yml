@@ -1,0 +1,17 @@
+- name: Data Types
+  hosts: localhost
+  vars:
+    Course: Devops with AWS #string
+    Tech: # list
+      - Linux
+      - AWS
+      - Ansible
+      - Terraform
+    Experience: # map or dictionary
+      DevOps: 3
+      AWS: 2
+      Linux: 1
+    Project: true #boolean
+  tasks:
+    - ansible.builtin.debug:
+        msg: "Hi Team, Welcome to {{Course}}. You will learn {{Tech}} Equalant to {{Experience}} Real-time project {{Project}}"
