@@ -11,6 +11,9 @@
       ansible.builtin.debug:
         msg: "User Info is: {{USER}}"
 
+    - name: Creating user if not exists
+      ansible.builtin.command: useradd expense
+      when: USER.rc !=0 #condition
 
     - name: To check if ansible is running this or not
       ansible.builtin.debug:
