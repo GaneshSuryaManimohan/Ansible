@@ -4,5 +4,5 @@
     - vars.yml
   tasks:
     - name: display student details
-      anisble.builtin.debug:
+      ansible.builtin.debug:
         msg: "Hi Team, my first name is {{first_name}} middel name is {{middle_name}} last name is {{last_name}}. Date of Birth is {{DOB}}. I'm from {{Village}}"
