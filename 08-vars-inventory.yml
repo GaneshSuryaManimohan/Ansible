@@ -1,0 +1,6 @@
+- name: Calling variables that are declared in inventory file
+  hosts: localhost
+  tasks:
+    - name: printing course
+      ansible.builtin.debug:
+        msg: "Hi Team, we are learning {{course}}, the duration of course is {{duration}}. Amount to be paid is {{fees}}"
