@@ -1,6 +1,7 @@
 - name: Conditions
   hosts: node1
   become: true
+  ignore_errors: true
   tasks:
     - name: check if user exists or not
       ansible.builtin.command: id expense
