@@ -1,5 +1,5 @@
 - name: Calling variables that are declared in inventory file
-  hosts: localhost
+  hosts: mypc
   tasks:
     - name: printing course
       ansible.builtin.debug:
