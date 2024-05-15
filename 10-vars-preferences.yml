@@ -4,10 +4,10 @@
     WISHES: "Hi from PLAY Level"
   # vars_files:
   #   - vars.yml
-  vars_prompt:
-  - name: WISHES
-    prompt: Please enter wishes
-    private: false
+  # vars_prompt:
+  # - name: WISHES
+  #   prompt: Please enter wishes
+  #   private: false
   tasks:
     - name: printing preferences
       # vars:
@@ -26,4 +26,8 @@
 #ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 10-vars-preferences.yml
 #Please enter wishes: Hi from Prompt
 
-#4. 
+#4. Prompt Level
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 10-vars-preferences.yml
+#Please enter wishes: Hi from Prompt level
+
+#5. 
