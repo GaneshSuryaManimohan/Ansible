@@ -9,4 +9,4 @@
       private: true
   tasks:
       ansible.builtin.debug:
-      msg: "Hi Team, The Username is {{USERNAME}} and Password is {{PASSWORD}}"
+        msg: "Hi Team, The Username is {{USERNAME}} and Password is {{PASSWORD}}"
