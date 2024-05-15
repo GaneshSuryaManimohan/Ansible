@@ -1,0 +1,10 @@
+- name: Conditions
+  hosts: node1
+  become: true
+  tasks:
+    - name: check if user exists or not
+      ansible.builtin.command: id expense
+
+    - name: To check if ansible is running this or not
+      ansible.builtin.debug:
+        msg: "HELLO"
