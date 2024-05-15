@@ -1,10 +1,16 @@
 - name: Conditions
   hosts: node1
   become: true
-  ignore_errors: true
+  ignore_errors: true #this will ignore the errors and proceed to next task
   tasks:
     - name: check if user exists or not
       ansible.builtin.command: id expense
+      register: USER
+
+    - name: Storing the output of above task
+      ansible.builtin.debug:
+        msg: "User Info is: {{USER}}"
+
 
     - name: To check if ansible is running this or not
       ansible.builtin.debug:
