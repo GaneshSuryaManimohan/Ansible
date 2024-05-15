@@ -5,4 +5,5 @@
       ansible.builtin.debug:
         msg: "Hi Team, we are learning {{course}}, the duration of course is {{duration}}. Amount to be paid is {{fees}}"
 
-###  ansible-playbook 09-vars-args.yml -e course=DevOps -e duration=10hrs -e fees=1000 ###
+###  ansible-playbook 09-vars-args.yml -e course=DevOps -e duration=10hrs -e fees=1000 (OR)
+### ansible-playbook 09-vars-args.yml -e "course=DevOps duration=10hrs fees=1000" 
