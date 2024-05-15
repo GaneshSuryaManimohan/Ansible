@@ -4,11 +4,11 @@
     course: "DevOps"
     duration: "120hrs"
     fees: "24490/-"
-    tasks:
-      - name: priting details with task level variables
-        vars:
-          course: "AWS"
-          duration: "120hrs"
-          fees: "15000/-"
-        ansible.builtin.debug:
-         msg: "Hi Team, we are learning {{course}}, the duration of course is {{duration}}. Amount to be paid is {{fees}}"
+  tasks:
+  - name: priting details with task level variables
+    vars:
+      course: "AWS"
+      duration: "120hrs"
+      fees: "15000/-"
+      ansible.builtin.debug:
+        msg: "Hi Team, we are learning {{course}}, the duration of course is {{duration}}. Amount to be paid is {{fees}}"
