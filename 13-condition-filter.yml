@@ -1,5 +1,5 @@
 - name: Filter Conditions
-  hosts: localhost
+  hosts: mypc
   vars_prompt:
   - name: number
     prompt: Please Enter a number
