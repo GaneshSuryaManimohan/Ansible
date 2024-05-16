@@ -50,14 +50,14 @@
   hosts: localhost
   vars:
     dictionary:
-      course: "AWS+DevOps"
-      duration: "120hrs"
-      fees: "24490"
+      course: AWS+DevOps
+      duration: 120hrs
+      fees: 24490
   tasks:
     - name: printing dictionary before converting
       ansible.builtin.debug:
         msg: "{{ dictionary }}"
-        
+
     - name: printing dictionary after converting
       ansible.builtin.debug:
         msg: "{{ dictionary | dict2items }}"
