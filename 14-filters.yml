@@ -45,3 +45,19 @@
     - name: print max and min age from above list
       ansible.builtin.debug:
         msg: "maximum age: {{ age | max }}, minimum age: {{ age | min }}"
+
+- name: convert dictionary/map/key-value pair to list
+  hosts: localhost
+  vars:
+    dictionary:
+      course: "AWS+DevOps"
+      duration: "120hrs"
+      fees: "24490"
+  tasks:
+    - name: printing dictionary before converting
+      ansible.builtin.debug:
+        msg: "{{ dictionary }}"
+        
+    - name: printing dictionary after converting
+      ansible.builtin.debug:
+        msg: "{{ dictionary | dict2items }}"
