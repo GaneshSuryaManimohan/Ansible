@@ -9,3 +9,15 @@
         - Shell Scripting
         - Ansible
         - Terraform
+
+- name: Installing packages via loop
+  hosts: node1
+  become: true
+  tasks:
+    - name: Install packages
+      ansible.builtin.dnf:
+        name: "Installing {{item}}"
+        state: latest
+      loop:
+        - mysql
+        - nginx
