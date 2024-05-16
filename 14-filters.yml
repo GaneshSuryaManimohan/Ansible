@@ -1,0 +1,6 @@
+- name: Giving Default Variable Value using filters
+  hosts: localhost
+  tasks:
+    - name: Course
+      ansible.builtin.debug:
+        msg: "Hi Welcome to {{course}} | default('Ansible')"
