@@ -46,7 +46,7 @@
       ansible.builtin.debug:
         msg: "maximum age: {{ age | max }}, minimum age: {{ age | min }}"
 
-- name: convert dictionary/map/key-value pair to list
+- name: convert dictionary/map to items
   hosts: localhost
   vars:
     dictionary:
@@ -61,3 +61,19 @@
     - name: printing dictionary after converting
       ansible.builtin.debug:
         msg: "{{ dictionary | dict2items }}"
+
+- name: convert items to dictionary
+  hosts: localhost
+  vars:
+    list:
+     - {"key": "course", "value": "AWS+DevOps"}
+     - {"key": "duration", "value": "120hrs"}
+     - {"key": "fees", "value": 24490}
+  tasks:
+    - name: printing list before converting
+      ansible.builtin.debug:
+        msg: "{{ list }}"
+
+    - name: printing list after converting
+      ansible.builtin.debug:
+        msg: "{{ list | items2dict }}"
