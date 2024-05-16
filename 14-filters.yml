@@ -4,3 +4,17 @@
     - name: Course
       ansible.builtin.debug:
         msg: "Hi Welcome to {{course | default('Ansible') }}"
+
+# In this case if the variable course is not defined by the user, by default it will take 'Ansible'
+# If we provide the course as argument then it will take priority, example:
+# ansible-playbook 14-filters.yml -e course=DevOps
+# above play will print "msg": "Hi Welcome to DevOps"
+
+- name: convert to uppercase
+  hosts: localhost
+  vars:
+    name: "Thuttagunta Ganesh Surya Mani Mohan"
+  tasks:
+    - name: changing to uppercase
+      ansible.builtin.debug:
+        msg: "{{ name | upper }}"
