@@ -16,7 +16,7 @@
   tasks:
     - name: Install packages
       ansible.builtin.dnf:
-        name: "Installing {{item}}"
+        name: "{{item}}"
         state: latest
       loop:
         - mysql
