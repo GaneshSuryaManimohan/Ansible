@@ -6,3 +6,7 @@
 
     - name: using command module
       ansible.builtin.shell: "echo 'Hi from Shell moduel' > /tmp/shell.txt"
+
+# In command module, simple commands without the need of shell variables, environment and features like redirections, pipes, work with command module 
+
+# Shell module is considerably slower than command and should be avoided unless there is a special need for using shell features, like environment variable expansion or chaining multiple commands using pipes. command and shell can be used interchangeably.
